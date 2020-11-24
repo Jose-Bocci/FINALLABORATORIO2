@@ -1,0 +1,70 @@
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\FinalLaboratorio2_JoséBocci.exe.config
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\FinalLaboratorio2_JoséBocci.exe
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\FinalLaboratorio2_JoséBocci.pdb
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.csprojAssemblyReference.cache
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.Properties.Resources.resources
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.csproj.GenerateResource.cache
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.csproj.CoreCompileInputs.cache
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.exe
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.pdb
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.RegistroDeHuespedes.resources
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\Google.Protobuf.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\MySql.Data.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\Renci.SshNet.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\System.Buffers.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\System.Memory.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\Zstandard.Net.dll
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\Google.Protobuf.pdb
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\Google.Protobuf.xml
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\MySql.Data.xml
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\Renci.SshNet.xml
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\System.Buffers.xml
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\System.Memory.xml
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\jose\source\repos\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.csproj.CopyComplete
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\FinalLaboratorio2_JoséBocci.exe.config
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\FinalLaboratorio2_JoséBocci.exe
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\FinalLaboratorio2_JoséBocci.pdb
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\Google.Protobuf.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\MySql.Data.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\Renci.SshNet.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\System.Buffers.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\System.Memory.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\Zstandard.Net.dll
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\Google.Protobuf.pdb
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\Google.Protobuf.xml
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\MySql.Data.xml
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\Renci.SshNet.xml
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\System.Buffers.xml
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\System.Memory.xml
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.csprojAssemblyReference.cache
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.RegistroDeHuespedes.resources
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.Properties.Resources.resources
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.csproj.GenerateResource.cache
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.csproj.CoreCompileInputs.cache
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.csproj.CopyComplete
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.exe
+C:\Users\jose\Desktop\Cosas\ACONCAGUA\PRIMER AÑO\Segundo Semestre\LABORATORIO 2\FINAL\FinalLaboratorio2_JoséBocci\obj\Debug\FinalLaboratorio2_JoséBocci.pdb
