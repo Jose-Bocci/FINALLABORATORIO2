@@ -68,6 +68,15 @@
             this.lblEtiqueta = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.dgvClientesGerente = new System.Windows.Forms.DataGridView();
+            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApellidoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DNICliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Preferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NochesDeEstadia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelefonoUrgencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoDeHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodigoHabitacionCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrarSesión = new System.Windows.Forms.Button();
             this.lblPersonal = new System.Windows.Forms.Label();
             this.dgvClientes2 = new System.Windows.Forms.DataGridView();
@@ -78,15 +87,6 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblHabitacion = new System.Windows.Forms.Label();
             this.txtHabitacion = new System.Windows.Forms.TextBox();
-            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApellidoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNICliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Preferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NochesDeEstadia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelefonoUrgencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoDeHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoHabitacionCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientesGerente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes2)).BeginInit();
@@ -334,11 +334,11 @@
             // 
             this.cBxTurista.AutoSize = true;
             this.cBxTurista.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBxTurista.Location = new System.Drawing.Point(611, 321);
+            this.cBxTurista.Location = new System.Drawing.Point(558, 321);
             this.cBxTurista.Name = "cBxTurista";
-            this.cBxTurista.Size = new System.Drawing.Size(87, 27);
+            this.cBxTurista.Size = new System.Drawing.Size(176, 27);
             this.cBxTurista.TabIndex = 25;
-            this.cBxTurista.Text = "Turista";
+            this.cBxTurista.Text = "Turista (0% desc)";
             this.cBxTurista.UseVisualStyleBackColor = true;
             this.cBxTurista.CheckedChanged += new System.EventHandler(this.cBxTurista_CheckedChanged);
             // 
@@ -346,11 +346,11 @@
             // 
             this.cBxFrecuente.AutoSize = true;
             this.cBxFrecuente.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBxFrecuente.Location = new System.Drawing.Point(730, 321);
+            this.cBxFrecuente.Location = new System.Drawing.Point(740, 321);
             this.cBxFrecuente.Name = "cBxFrecuente";
-            this.cBxFrecuente.Size = new System.Drawing.Size(111, 27);
+            this.cBxFrecuente.Size = new System.Drawing.Size(200, 27);
             this.cBxFrecuente.TabIndex = 26;
-            this.cBxFrecuente.Text = "Frecuente";
+            this.cBxFrecuente.Text = "Frecuente (5% desc)";
             this.cBxFrecuente.UseVisualStyleBackColor = true;
             this.cBxFrecuente.CheckedChanged += new System.EventHandler(this.cBxFrecuente_CheckedChanged);
             // 
@@ -502,10 +502,73 @@
             this.TelefonoUrgencias,
             this.TipoDeHabitacion,
             this.CodigoHabitacionCliente});
-            this.dgvClientesGerente.Location = new System.Drawing.Point(399, 39);
+            this.dgvClientesGerente.Location = new System.Drawing.Point(265, 39);
             this.dgvClientesGerente.Name = "dgvClientesGerente";
             this.dgvClientesGerente.Size = new System.Drawing.Size(954, 454);
             this.dgvClientesGerente.TabIndex = 37;
+            // 
+            // NombreCliente
+            // 
+            this.NombreCliente.Frozen = true;
+            this.NombreCliente.HeaderText = "Nombre";
+            this.NombreCliente.Name = "NombreCliente";
+            this.NombreCliente.ReadOnly = true;
+            // 
+            // ApellidoCliente
+            // 
+            this.ApellidoCliente.Frozen = true;
+            this.ApellidoCliente.HeaderText = "Apellido";
+            this.ApellidoCliente.Name = "ApellidoCliente";
+            this.ApellidoCliente.ReadOnly = true;
+            // 
+            // DNICliente
+            // 
+            this.DNICliente.Frozen = true;
+            this.DNICliente.HeaderText = "DNI";
+            this.DNICliente.Name = "DNICliente";
+            this.DNICliente.ReadOnly = true;
+            // 
+            // PrecioTotal
+            // 
+            this.PrecioTotal.Frozen = true;
+            this.PrecioTotal.HeaderText = "Precio";
+            this.PrecioTotal.Name = "PrecioTotal";
+            this.PrecioTotal.ReadOnly = true;
+            // 
+            // Preferencia
+            // 
+            this.Preferencia.Frozen = true;
+            this.Preferencia.HeaderText = "Preferencia";
+            this.Preferencia.Name = "Preferencia";
+            this.Preferencia.ReadOnly = true;
+            // 
+            // NochesDeEstadia
+            // 
+            this.NochesDeEstadia.Frozen = true;
+            this.NochesDeEstadia.HeaderText = "Noches";
+            this.NochesDeEstadia.Name = "NochesDeEstadia";
+            this.NochesDeEstadia.ReadOnly = true;
+            // 
+            // TelefonoUrgencias
+            // 
+            this.TelefonoUrgencias.Frozen = true;
+            this.TelefonoUrgencias.HeaderText = "Telefono Urgencias";
+            this.TelefonoUrgencias.Name = "TelefonoUrgencias";
+            this.TelefonoUrgencias.ReadOnly = true;
+            // 
+            // TipoDeHabitacion
+            // 
+            this.TipoDeHabitacion.Frozen = true;
+            this.TipoDeHabitacion.HeaderText = "Habitación";
+            this.TipoDeHabitacion.Name = "TipoDeHabitacion";
+            this.TipoDeHabitacion.ReadOnly = true;
+            // 
+            // CodigoHabitacionCliente
+            // 
+            this.CodigoHabitacionCliente.Frozen = true;
+            this.CodigoHabitacionCliente.HeaderText = "Codigo Habitacion";
+            this.CodigoHabitacionCliente.Name = "CodigoHabitacionCliente";
+            this.CodigoHabitacionCliente.ReadOnly = true;
             // 
             // btnCerrarSesión
             // 
@@ -594,69 +657,6 @@
             this.txtHabitacion.Name = "txtHabitacion";
             this.txtHabitacion.Size = new System.Drawing.Size(291, 29);
             this.txtHabitacion.TabIndex = 42;
-            // 
-            // NombreCliente
-            // 
-            this.NombreCliente.Frozen = true;
-            this.NombreCliente.HeaderText = "Nombre";
-            this.NombreCliente.Name = "NombreCliente";
-            this.NombreCliente.ReadOnly = true;
-            // 
-            // ApellidoCliente
-            // 
-            this.ApellidoCliente.Frozen = true;
-            this.ApellidoCliente.HeaderText = "Apellido";
-            this.ApellidoCliente.Name = "ApellidoCliente";
-            this.ApellidoCliente.ReadOnly = true;
-            // 
-            // DNICliente
-            // 
-            this.DNICliente.Frozen = true;
-            this.DNICliente.HeaderText = "DNI";
-            this.DNICliente.Name = "DNICliente";
-            this.DNICliente.ReadOnly = true;
-            // 
-            // PrecioTotal
-            // 
-            this.PrecioTotal.Frozen = true;
-            this.PrecioTotal.HeaderText = "Precio";
-            this.PrecioTotal.Name = "PrecioTotal";
-            this.PrecioTotal.ReadOnly = true;
-            // 
-            // Preferencia
-            // 
-            this.Preferencia.Frozen = true;
-            this.Preferencia.HeaderText = "Preferencia";
-            this.Preferencia.Name = "Preferencia";
-            this.Preferencia.ReadOnly = true;
-            // 
-            // NochesDeEstadia
-            // 
-            this.NochesDeEstadia.Frozen = true;
-            this.NochesDeEstadia.HeaderText = "Noches";
-            this.NochesDeEstadia.Name = "NochesDeEstadia";
-            this.NochesDeEstadia.ReadOnly = true;
-            // 
-            // TelefonoUrgencias
-            // 
-            this.TelefonoUrgencias.Frozen = true;
-            this.TelefonoUrgencias.HeaderText = "Telefono Urgencias";
-            this.TelefonoUrgencias.Name = "TelefonoUrgencias";
-            this.TelefonoUrgencias.ReadOnly = true;
-            // 
-            // TipoDeHabitacion
-            // 
-            this.TipoDeHabitacion.Frozen = true;
-            this.TipoDeHabitacion.HeaderText = "Habitación";
-            this.TipoDeHabitacion.Name = "TipoDeHabitacion";
-            this.TipoDeHabitacion.ReadOnly = true;
-            // 
-            // CodigoHabitacionCliente
-            // 
-            this.CodigoHabitacionCliente.Frozen = true;
-            this.CodigoHabitacionCliente.HeaderText = "Codigo Habitacion";
-            this.CodigoHabitacionCliente.Name = "CodigoHabitacionCliente";
-            this.CodigoHabitacionCliente.ReadOnly = true;
             // 
             // RegistroDeHuespedes
             // 

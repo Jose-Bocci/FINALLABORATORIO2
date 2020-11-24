@@ -185,7 +185,7 @@ namespace FinalLaboratorio2_JoséBocci
             string preferencia = "";
             if (txtNombre.Text == "" || txtApellido.Text == "" || txtLugarDeResidencia.Text == "" || txtDNI.Text == "" || txtTelefono.Text == "" || Utiles.validarCampo(txtDNI.Text, "int") == false || Utiles.validarCampo(txtTelefono.Text, "long") == false || txtHabitacion.Text == "")
             {
-                MessageBox.Show("Error al ingresar los datos de Registro. Hay campos vacíos. Corrija", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Error al ingresar los datos de Registro. Hay campos vacíos y/o formato de datos erróneo. Corrija", "Error", MessageBoxButtons.OK);
             }
             else
             {
@@ -239,6 +239,7 @@ namespace FinalLaboratorio2_JoséBocci
                             break;
                         case 2:
                             registrados2++;
+                            H1 = new Habitacion(codigoHabitacion);
                             C1 = new Cliente(nombre, apellido, direccion, numero, dni, H1);
                             ClientesEmpleado2.Add(C1);
                             n = dgvClientes2.Rows.Add();
