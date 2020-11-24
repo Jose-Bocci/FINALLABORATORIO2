@@ -604,6 +604,7 @@
             this.dgvClientes2.Name = "dgvClientes2";
             this.dgvClientes2.Size = new System.Drawing.Size(546, 454);
             this.dgvClientes2.TabIndex = 40;
+            this.dgvClientes2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes2_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 

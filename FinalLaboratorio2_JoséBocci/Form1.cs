@@ -38,6 +38,11 @@ namespace FinalLaboratorio2_JoséBocci
         {
             n = e.RowIndex;
         }
+        private void dgvClientes2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            n = e.RowIndex;
+        }
+
 
         #region cBxChange
         private void cBxTurista_CheckedChanged(object sender, EventArgs e)
@@ -61,6 +66,7 @@ namespace FinalLaboratorio2_JoséBocci
         {
             Limpiar();
         }
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             usuario = txtNombre.Text;
@@ -266,6 +272,7 @@ namespace FinalLaboratorio2_JoséBocci
         }
         #endregion
         #region metodos
+        //Limpia los campos de entrada
         private void Limpiar()
         {
             txtNombre.Text = "";
@@ -285,6 +292,7 @@ namespace FinalLaboratorio2_JoséBocci
             comboBxNoches.SelectedIndex = -1;
             comboBxNoches.Text = "-SELECCIONE-";
         }
+        //Verifica la seleccion de noches y tipo de habitacion
         private void verificarNochesyHabitacion()
         {
             switch (comboBxHabitacion.SelectedIndex)
@@ -321,6 +329,7 @@ namespace FinalLaboratorio2_JoséBocci
                     break;
             }
         }
+        //Oculta los elementos para el inicio de sesion
         private void Ocultar()
         {
             lblDNI.Visible = false;
@@ -359,7 +368,7 @@ namespace FinalLaboratorio2_JoséBocci
             cBxTurista.Visible = false;
             cBxFrecuente.Visible = false;
         }
-
+        //Muestra los elementos luego del inicio de sesion
         private void Mostrar()
         {
             lblNombre.Text = "Nombre";
@@ -427,7 +436,7 @@ namespace FinalLaboratorio2_JoséBocci
             }
             
         }
-
+        //Inicio de sesion
         private void Sesiones()
         {
             Ocultar();
@@ -439,7 +448,7 @@ namespace FinalLaboratorio2_JoséBocci
             lblApellido.Text = "Contraseña";
 
         }
-
+        //Calcula el precio de la estadia
         private void Calcular()
         {
             verificarNochesyHabitacion();
