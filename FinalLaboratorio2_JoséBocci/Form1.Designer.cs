@@ -63,6 +63,11 @@
             this.lblEtiqueta = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.dgvClientesGerente = new System.Windows.Forms.DataGridView();
+            this.btnCerrarSesión = new System.Windows.Forms.Button();
+            this.lblPersonal = new System.Windows.Forms.Label();
+            this.dgvClientes2 = new System.Windows.Forms.DataGridView();
+            this.lblHabitacion = new System.Windows.Forms.Label();
+            this.txtHabitacion = new System.Windows.Forms.TextBox();
             this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApellidoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DNICliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,18 +77,6 @@
             this.TelefonoUrgencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoDeHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoHabitacionCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCerrarSesión = new System.Windows.Forms.Button();
-            this.lblPersonal = new System.Windows.Forms.Label();
-            this.dgvClientes2 = new System.Windows.Forms.DataGridView();
-            this.lblHabitacion = new System.Windows.Forms.Label();
-            this.txtHabitacion = new System.Windows.Forms.TextBox();
-            this.Columna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Columna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaDNICliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Columna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Columna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Columna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HabitacionCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnaDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,6 +84,13 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HabitacionCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnaDNICliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HabitacionCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientesGerente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes2)).BeginInit();
@@ -151,6 +151,7 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(172, 29);
             this.txtDNI.TabIndex = 5;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // lblNoches
             // 
@@ -178,6 +179,7 @@
             this.comboBxNoches.Size = new System.Drawing.Size(192, 29);
             this.comboBxNoches.TabIndex = 7;
             this.comboBxNoches.Text = "-SELECCIONE-";
+            this.comboBxNoches.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBxNoches_KeyPress);
             // 
             // lblTipoDeHabitacion
             // 
@@ -202,6 +204,7 @@
             this.comboBxHabitacion.Size = new System.Drawing.Size(169, 29);
             this.comboBxHabitacion.TabIndex = 9;
             this.comboBxHabitacion.Text = "-SELECCIONE-";
+            this.comboBxHabitacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBxHabitacion_KeyPress);
             // 
             // lblDescuento
             // 
@@ -323,6 +326,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(291, 29);
             this.txtTelefono.TabIndex = 21;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // lblTipoDeCliente
             // 
@@ -484,75 +488,12 @@
             this.TelefonoUrgencias,
             this.TipoDeHabitacion,
             this.CodigoHabitacionCliente});
-            this.dgvClientesGerente.Location = new System.Drawing.Point(269, 39);
+            this.dgvClientesGerente.Location = new System.Drawing.Point(236, 39);
             this.dgvClientesGerente.MultiSelect = false;
             this.dgvClientesGerente.Name = "dgvClientesGerente";
-            this.dgvClientesGerente.Size = new System.Drawing.Size(954, 454);
+            this.dgvClientesGerente.Size = new System.Drawing.Size(993, 454);
             this.dgvClientesGerente.TabIndex = 37;
             this.dgvClientesGerente.TabStop = false;
-            // 
-            // NombreCliente
-            // 
-            this.NombreCliente.Frozen = true;
-            this.NombreCliente.HeaderText = "Nombre";
-            this.NombreCliente.Name = "NombreCliente";
-            this.NombreCliente.ReadOnly = true;
-            // 
-            // ApellidoCliente
-            // 
-            this.ApellidoCliente.Frozen = true;
-            this.ApellidoCliente.HeaderText = "Apellido";
-            this.ApellidoCliente.Name = "ApellidoCliente";
-            this.ApellidoCliente.ReadOnly = true;
-            // 
-            // DNICliente
-            // 
-            this.DNICliente.Frozen = true;
-            this.DNICliente.HeaderText = "DNI";
-            this.DNICliente.Name = "DNICliente";
-            this.DNICliente.ReadOnly = true;
-            // 
-            // PrecioTotal
-            // 
-            this.PrecioTotal.Frozen = true;
-            this.PrecioTotal.HeaderText = "Precio";
-            this.PrecioTotal.Name = "PrecioTotal";
-            this.PrecioTotal.ReadOnly = true;
-            // 
-            // Preferencia
-            // 
-            this.Preferencia.Frozen = true;
-            this.Preferencia.HeaderText = "Preferencia";
-            this.Preferencia.Name = "Preferencia";
-            this.Preferencia.ReadOnly = true;
-            // 
-            // NochesDeEstadia
-            // 
-            this.NochesDeEstadia.Frozen = true;
-            this.NochesDeEstadia.HeaderText = "Noches";
-            this.NochesDeEstadia.Name = "NochesDeEstadia";
-            this.NochesDeEstadia.ReadOnly = true;
-            // 
-            // TelefonoUrgencias
-            // 
-            this.TelefonoUrgencias.Frozen = true;
-            this.TelefonoUrgencias.HeaderText = "Telefono Urgencias";
-            this.TelefonoUrgencias.Name = "TelefonoUrgencias";
-            this.TelefonoUrgencias.ReadOnly = true;
-            // 
-            // TipoDeHabitacion
-            // 
-            this.TipoDeHabitacion.Frozen = true;
-            this.TipoDeHabitacion.HeaderText = "Habitación";
-            this.TipoDeHabitacion.Name = "TipoDeHabitacion";
-            this.TipoDeHabitacion.ReadOnly = true;
-            // 
-            // CodigoHabitacionCliente
-            // 
-            this.CodigoHabitacionCliente.Frozen = true;
-            this.CodigoHabitacionCliente.HeaderText = "Codigo Habitacion";
-            this.CodigoHabitacionCliente.Name = "CodigoHabitacionCliente";
-            this.CodigoHabitacionCliente.ReadOnly = true;
             // 
             // btnCerrarSesión
             // 
@@ -616,105 +557,155 @@
             this.txtHabitacion.Size = new System.Drawing.Size(291, 29);
             this.txtHabitacion.TabIndex = 42;
             // 
-            // Columna1
+            // NombreCliente
             // 
-            this.Columna1.Frozen = true;
-            this.Columna1.HeaderText = "Nombre";
-            this.Columna1.Name = "Columna1";
-            this.Columna1.ReadOnly = true;
+            this.NombreCliente.Frozen = true;
+            this.NombreCliente.HeaderText = "Nombre";
+            this.NombreCliente.Name = "NombreCliente";
+            this.NombreCliente.ReadOnly = true;
             // 
-            // Columna2
+            // ApellidoCliente
             // 
-            this.Columna2.Frozen = true;
-            this.Columna2.HeaderText = "Apellido";
-            this.Columna2.Name = "Columna2";
-            this.Columna2.ReadOnly = true;
+            this.ApellidoCliente.Frozen = true;
+            this.ApellidoCliente.HeaderText = "Apellido";
+            this.ApellidoCliente.Name = "ApellidoCliente";
+            this.ApellidoCliente.ReadOnly = true;
             // 
-            // ColumnaDNICliente
+            // DNICliente
             // 
-            this.ColumnaDNICliente.Frozen = true;
-            this.ColumnaDNICliente.HeaderText = "DNI";
-            this.ColumnaDNICliente.Name = "ColumnaDNICliente";
-            this.ColumnaDNICliente.ReadOnly = true;
+            this.DNICliente.Frozen = true;
+            this.DNICliente.HeaderText = "DNI";
+            this.DNICliente.Name = "DNICliente";
+            this.DNICliente.ReadOnly = true;
             // 
-            // Columna3
+            // PrecioTotal
             // 
-            this.Columna3.Frozen = true;
-            this.Columna3.HeaderText = "Noches";
-            this.Columna3.Name = "Columna3";
-            this.Columna3.ReadOnly = true;
+            this.PrecioTotal.Frozen = true;
+            this.PrecioTotal.HeaderText = "Precio";
+            this.PrecioTotal.Name = "PrecioTotal";
+            this.PrecioTotal.ReadOnly = true;
             // 
-            // Columna4
+            // Preferencia
             // 
-            this.Columna4.Frozen = true;
-            this.Columna4.HeaderText = "Precio";
-            this.Columna4.Name = "Columna4";
-            this.Columna4.ReadOnly = true;
+            this.Preferencia.Frozen = true;
+            this.Preferencia.HeaderText = "Preferencia";
+            this.Preferencia.Name = "Preferencia";
+            this.Preferencia.ReadOnly = true;
             // 
-            // Columna5
+            // NochesDeEstadia
             // 
-            this.Columna5.Frozen = true;
-            this.Columna5.HeaderText = "Preferencia";
-            this.Columna5.Name = "Columna5";
-            this.Columna5.ReadOnly = true;
+            this.NochesDeEstadia.Frozen = true;
+            this.NochesDeEstadia.HeaderText = "Noches";
+            this.NochesDeEstadia.Name = "NochesDeEstadia";
+            this.NochesDeEstadia.ReadOnly = true;
             // 
-            // HabitacionCodigo
+            // TelefonoUrgencias
             // 
-            this.HabitacionCodigo.Frozen = true;
-            this.HabitacionCodigo.HeaderText = "Habitacion";
-            this.HabitacionCodigo.Name = "HabitacionCodigo";
-            this.HabitacionCodigo.ReadOnly = true;
-            this.HabitacionCodigo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TelefonoUrgencias.Frozen = true;
+            this.TelefonoUrgencias.HeaderText = "Telefono Urgencias";
+            this.TelefonoUrgencias.Name = "TelefonoUrgencias";
+            this.TelefonoUrgencias.ReadOnly = true;
+            // 
+            // TipoDeHabitacion
+            // 
+            this.TipoDeHabitacion.Frozen = true;
+            this.TipoDeHabitacion.HeaderText = "Habitación";
+            this.TipoDeHabitacion.Name = "TipoDeHabitacion";
+            this.TipoDeHabitacion.ReadOnly = true;
+            this.TipoDeHabitacion.Width = 150;
+            // 
+            // CodigoHabitacionCliente
+            // 
+            this.CodigoHabitacionCliente.Frozen = true;
+            this.CodigoHabitacionCliente.HeaderText = "Codigo Habitacion";
+            this.CodigoHabitacionCliente.Name = "CodigoHabitacionCliente";
+            this.CodigoHabitacionCliente.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.Frozen = true;
             this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.Frozen = true;
             this.dataGridViewTextBoxColumn2.HeaderText = "Apellido";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // ColumnaDNI
             // 
-            this.ColumnaDNI.Frozen = true;
             this.ColumnaDNI.HeaderText = "DNI";
             this.ColumnaDNI.Name = "ColumnaDNI";
             this.ColumnaDNI.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.Frozen = true;
             this.dataGridViewTextBoxColumn3.HeaderText = "Noches";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.Frozen = true;
             this.dataGridViewTextBoxColumn4.HeaderText = "Precio";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.Frozen = true;
             this.dataGridViewTextBoxColumn5.HeaderText = "Preferencia";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // HabitacionCod
             // 
-            this.HabitacionCod.Frozen = true;
             this.HabitacionCod.HeaderText = "Habitacion";
             this.HabitacionCod.Name = "HabitacionCod";
             this.HabitacionCod.ReadOnly = true;
             this.HabitacionCod.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Columna1
+            // 
+            this.Columna1.HeaderText = "Nombre";
+            this.Columna1.Name = "Columna1";
+            this.Columna1.ReadOnly = true;
+            // 
+            // Columna2
+            // 
+            this.Columna2.HeaderText = "Apellido";
+            this.Columna2.Name = "Columna2";
+            this.Columna2.ReadOnly = true;
+            // 
+            // ColumnaDNICliente
+            // 
+            this.ColumnaDNICliente.HeaderText = "DNI";
+            this.ColumnaDNICliente.Name = "ColumnaDNICliente";
+            this.ColumnaDNICliente.ReadOnly = true;
+            // 
+            // Columna3
+            // 
+            this.Columna3.HeaderText = "Noches";
+            this.Columna3.Name = "Columna3";
+            this.Columna3.ReadOnly = true;
+            // 
+            // Columna4
+            // 
+            this.Columna4.HeaderText = "Precio";
+            this.Columna4.Name = "Columna4";
+            this.Columna4.ReadOnly = true;
+            // 
+            // Columna5
+            // 
+            this.Columna5.HeaderText = "Preferencia";
+            this.Columna5.Name = "Columna5";
+            this.Columna5.ReadOnly = true;
+            // 
+            // HabitacionCodigo
+            // 
+            this.HabitacionCodigo.HeaderText = "Habitacion";
+            this.HabitacionCodigo.Name = "HabitacionCodigo";
+            this.HabitacionCodigo.ReadOnly = true;
+            this.HabitacionCodigo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // RegistroDeHuespedes
             // 
@@ -723,12 +714,11 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1493, 519);
-            this.Controls.Add(this.txtHabitacion);
+            this.Controls.Add(this.dgvClientesGerente);
             this.Controls.Add(this.lblHabitacion);
             this.Controls.Add(this.dgvClientes2);
             this.Controls.Add(this.lblPersonal);
             this.Controls.Add(this.btnCerrarSesión);
-            this.Controls.Add(this.dgvClientesGerente);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.lblEtiqueta);
             this.Controls.Add(this.btnBorrar);
@@ -763,6 +753,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.txtHabitacion);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

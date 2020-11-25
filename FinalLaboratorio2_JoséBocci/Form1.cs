@@ -63,7 +63,7 @@ namespace FinalLaboratorio2_JoséBocci
             }
         }
         #endregion
-        #region btnClicks
+        #region btnClicks&keyPress
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
@@ -248,6 +248,36 @@ namespace FinalLaboratorio2_JoséBocci
                 }
             }
         }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void comboBxHabitacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            comboBxHabitacion.Text = "-SELECCIONE-";
+            comboBxHabitacion.SelectedIndex = -1;
+        }
+
+        private void comboBxNoches_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            comboBxNoches.Text = "-SELECCIONE-";
+            comboBxNoches.SelectedIndex = -1;
+        }
+
+
         #endregion
         #region Métodos
         //Buscar y borrar
