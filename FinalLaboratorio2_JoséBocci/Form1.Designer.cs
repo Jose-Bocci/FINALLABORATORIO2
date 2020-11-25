@@ -54,14 +54,9 @@
             this.cBxTurista = new System.Windows.Forms.CheckBox();
             this.cBxFrecuente = new System.Windows.Forms.CheckBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.dgvClientes1 = new System.Windows.Forms.DataGridView();
-            this.Columna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Columna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Columna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Columna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Columna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPrecioDoble = new System.Windows.Forms.Label();
             this.lblPrecioFamiliar = new System.Windows.Forms.Label();
             this.btnBorrar = new System.Windows.Forms.Button();
@@ -80,13 +75,22 @@
             this.btnCerrarSesión = new System.Windows.Forms.Button();
             this.lblPersonal = new System.Windows.Forms.Label();
             this.dgvClientes2 = new System.Windows.Forms.DataGridView();
+            this.lblHabitacion = new System.Windows.Forms.Label();
+            this.txtHabitacion = new System.Windows.Forms.TextBox();
+            this.Columna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnaDNICliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HabitacionCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnaDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblHabitacion = new System.Windows.Forms.Label();
-            this.txtHabitacion = new System.Windows.Forms.TextBox();
+            this.HabitacionCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientesGerente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes2)).BeginInit();
@@ -365,16 +369,16 @@
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // btnCancelar
+            // btnLimpiar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(611, 449);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(152, 44);
-            this.btnCancelar.TabIndex = 28;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnLimpiar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(611, 449);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(152, 44);
+            this.btnLimpiar.TabIndex = 28;
+            this.btnLimpiar.Text = "Limpiar Datos";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnCalcular
             // 
@@ -389,53 +393,27 @@
             // 
             // dgvClientes1
             // 
+            this.dgvClientes1.AllowUserToAddRows = false;
+            this.dgvClientes1.AllowUserToDeleteRows = false;
+            this.dgvClientes1.AllowUserToOrderColumns = true;
+            this.dgvClientes1.AllowUserToResizeColumns = false;
+            this.dgvClientes1.AllowUserToResizeRows = false;
             this.dgvClientes1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Columna1,
             this.Columna2,
+            this.ColumnaDNICliente,
             this.Columna3,
             this.Columna4,
-            this.Columna5});
+            this.Columna5,
+            this.HabitacionCodigo});
             this.dgvClientes1.Location = new System.Drawing.Point(939, 39);
+            this.dgvClientes1.MultiSelect = false;
             this.dgvClientes1.Name = "dgvClientes1";
             this.dgvClientes1.Size = new System.Drawing.Size(546, 454);
             this.dgvClientes1.TabIndex = 31;
+            this.dgvClientes1.TabStop = false;
             this.dgvClientes1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
-            // 
-            // Columna1
-            // 
-            this.Columna1.Frozen = true;
-            this.Columna1.HeaderText = "Nombre";
-            this.Columna1.Name = "Columna1";
-            this.Columna1.ReadOnly = true;
-            // 
-            // Columna2
-            // 
-            this.Columna2.Frozen = true;
-            this.Columna2.HeaderText = "Apellido";
-            this.Columna2.Name = "Columna2";
-            this.Columna2.ReadOnly = true;
-            // 
-            // Columna3
-            // 
-            this.Columna3.Frozen = true;
-            this.Columna3.HeaderText = "Noches";
-            this.Columna3.Name = "Columna3";
-            this.Columna3.ReadOnly = true;
-            // 
-            // Columna4
-            // 
-            this.Columna4.Frozen = true;
-            this.Columna4.HeaderText = "Precio";
-            this.Columna4.Name = "Columna4";
-            this.Columna4.ReadOnly = true;
-            // 
-            // Columna5
-            // 
-            this.Columna5.Frozen = true;
-            this.Columna5.HeaderText = "Preferencia";
-            this.Columna5.Name = "Columna5";
-            this.Columna5.ReadOnly = true;
             // 
             // lblPrecioDoble
             // 
@@ -491,6 +469,10 @@
             // 
             // dgvClientesGerente
             // 
+            this.dgvClientesGerente.AllowUserToAddRows = false;
+            this.dgvClientesGerente.AllowUserToDeleteRows = false;
+            this.dgvClientesGerente.AllowUserToResizeColumns = false;
+            this.dgvClientesGerente.AllowUserToResizeRows = false;
             this.dgvClientesGerente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientesGerente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreCliente,
@@ -502,10 +484,12 @@
             this.TelefonoUrgencias,
             this.TipoDeHabitacion,
             this.CodigoHabitacionCliente});
-            this.dgvClientesGerente.Location = new System.Drawing.Point(265, 39);
+            this.dgvClientesGerente.Location = new System.Drawing.Point(269, 39);
+            this.dgvClientesGerente.MultiSelect = false;
             this.dgvClientesGerente.Name = "dgvClientesGerente";
             this.dgvClientesGerente.Size = new System.Drawing.Size(954, 454);
             this.dgvClientesGerente.TabIndex = 37;
+            this.dgvClientesGerente.TabStop = false;
             // 
             // NombreCliente
             // 
@@ -593,18 +577,94 @@
             // 
             // dgvClientes2
             // 
+            this.dgvClientes2.AllowUserToAddRows = false;
+            this.dgvClientes2.AllowUserToDeleteRows = false;
+            this.dgvClientes2.AllowUserToResizeColumns = false;
+            this.dgvClientes2.AllowUserToResizeRows = false;
             this.dgvClientes2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
+            this.ColumnaDNI,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.dgvClientes2.Location = new System.Drawing.Point(939, 53);
+            this.dataGridViewTextBoxColumn5,
+            this.HabitacionCod});
+            this.dgvClientes2.Location = new System.Drawing.Point(939, 39);
+            this.dgvClientes2.MultiSelect = false;
             this.dgvClientes2.Name = "dgvClientes2";
             this.dgvClientes2.Size = new System.Drawing.Size(546, 454);
             this.dgvClientes2.TabIndex = 40;
+            this.dgvClientes2.TabStop = false;
             this.dgvClientes2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes2_CellClick);
+            // 
+            // lblHabitacion
+            // 
+            this.lblHabitacion.AutoSize = true;
+            this.lblHabitacion.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHabitacion.Location = new System.Drawing.Point(29, 437);
+            this.lblHabitacion.Name = "lblHabitacion";
+            this.lblHabitacion.Size = new System.Drawing.Size(151, 21);
+            this.lblHabitacion.TabIndex = 41;
+            this.lblHabitacion.Text = "Código Habitación";
+            // 
+            // txtHabitacion
+            // 
+            this.txtHabitacion.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHabitacion.Location = new System.Drawing.Point(30, 462);
+            this.txtHabitacion.Name = "txtHabitacion";
+            this.txtHabitacion.Size = new System.Drawing.Size(291, 29);
+            this.txtHabitacion.TabIndex = 42;
+            // 
+            // Columna1
+            // 
+            this.Columna1.Frozen = true;
+            this.Columna1.HeaderText = "Nombre";
+            this.Columna1.Name = "Columna1";
+            this.Columna1.ReadOnly = true;
+            // 
+            // Columna2
+            // 
+            this.Columna2.Frozen = true;
+            this.Columna2.HeaderText = "Apellido";
+            this.Columna2.Name = "Columna2";
+            this.Columna2.ReadOnly = true;
+            // 
+            // ColumnaDNICliente
+            // 
+            this.ColumnaDNICliente.Frozen = true;
+            this.ColumnaDNICliente.HeaderText = "DNI";
+            this.ColumnaDNICliente.Name = "ColumnaDNICliente";
+            this.ColumnaDNICliente.ReadOnly = true;
+            // 
+            // Columna3
+            // 
+            this.Columna3.Frozen = true;
+            this.Columna3.HeaderText = "Noches";
+            this.Columna3.Name = "Columna3";
+            this.Columna3.ReadOnly = true;
+            // 
+            // Columna4
+            // 
+            this.Columna4.Frozen = true;
+            this.Columna4.HeaderText = "Precio";
+            this.Columna4.Name = "Columna4";
+            this.Columna4.ReadOnly = true;
+            // 
+            // Columna5
+            // 
+            this.Columna5.Frozen = true;
+            this.Columna5.HeaderText = "Preferencia";
+            this.Columna5.Name = "Columna5";
+            this.Columna5.ReadOnly = true;
+            // 
+            // HabitacionCodigo
+            // 
+            this.HabitacionCodigo.Frozen = true;
+            this.HabitacionCodigo.HeaderText = "Habitacion";
+            this.HabitacionCodigo.Name = "HabitacionCodigo";
+            this.HabitacionCodigo.ReadOnly = true;
+            this.HabitacionCodigo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -619,6 +679,13 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Apellido";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // ColumnaDNI
+            // 
+            this.ColumnaDNI.Frozen = true;
+            this.ColumnaDNI.HeaderText = "DNI";
+            this.ColumnaDNI.Name = "ColumnaDNI";
+            this.ColumnaDNI.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -641,23 +708,13 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // lblHabitacion
+            // HabitacionCod
             // 
-            this.lblHabitacion.AutoSize = true;
-            this.lblHabitacion.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHabitacion.Location = new System.Drawing.Point(29, 437);
-            this.lblHabitacion.Name = "lblHabitacion";
-            this.lblHabitacion.Size = new System.Drawing.Size(151, 21);
-            this.lblHabitacion.TabIndex = 41;
-            this.lblHabitacion.Text = "Código Habitación";
-            // 
-            // txtHabitacion
-            // 
-            this.txtHabitacion.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHabitacion.Location = new System.Drawing.Point(30, 462);
-            this.txtHabitacion.Name = "txtHabitacion";
-            this.txtHabitacion.Size = new System.Drawing.Size(291, 29);
-            this.txtHabitacion.TabIndex = 42;
+            this.HabitacionCod.Frozen = true;
+            this.HabitacionCod.HeaderText = "Habitacion";
+            this.HabitacionCod.Name = "HabitacionCod";
+            this.HabitacionCod.ReadOnly = true;
+            this.HabitacionCod.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // RegistroDeHuespedes
             // 
@@ -679,7 +736,7 @@
             this.Controls.Add(this.lblPrecioDoble);
             this.Controls.Add(this.dgvClientes1);
             this.Controls.Add(this.btnCalcular);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.cBxFrecuente);
             this.Controls.Add(this.cBxTurista);
@@ -748,7 +805,7 @@
         private System.Windows.Forms.CheckBox cBxTurista;
         private System.Windows.Forms.CheckBox cBxFrecuente;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.DataGridView dgvClientes1;
         private System.Windows.Forms.Label lblPrecioDoble;
@@ -760,16 +817,6 @@
         private System.Windows.Forms.Button btnCerrarSesión;
         private System.Windows.Forms.Label lblPersonal;
         private System.Windows.Forms.DataGridView dgvClientes2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Columna1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Columna2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Columna3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Columna4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Columna5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Label lblHabitacion;
         private System.Windows.Forms.TextBox txtHabitacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
@@ -781,6 +828,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TelefonoUrgencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoDeHabitacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoHabitacionCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Columna1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Columna2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaDNICliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Columna3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Columna4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Columna5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HabitacionCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaDNI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HabitacionCod;
     }
 }
 

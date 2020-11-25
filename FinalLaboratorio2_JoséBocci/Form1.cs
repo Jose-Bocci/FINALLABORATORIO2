@@ -18,10 +18,12 @@ namespace FinalLaboratorio2_JoséBocci
         ArrayList ClientesGerente = new ArrayList();
         ArrayList ClientesEmpleado1 = new ArrayList();
         ArrayList ClientesEmpleado2 = new ArrayList();
+        ArrayList DNIREGISTRO = new ArrayList();
+        ArrayList HABITACIONREGISTRO = new ArrayList();
         Cliente C1;
         Habitacion H1;
         String nombre, apellido, direccion, usuario, contraseña, codigoHabitacion;
-        int dni, noches, n, personal, registrados1 = 0, registrados2 = 0;
+        int dni, noches, n, personal;
         double precioFinal, precio;
         long numero;
         #endregion
@@ -34,6 +36,7 @@ namespace FinalLaboratorio2_JoséBocci
         {
             Sesiones();
         }
+        #region dgvCellClick
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             n = e.RowIndex;
@@ -42,8 +45,7 @@ namespace FinalLaboratorio2_JoséBocci
         {
             n = e.RowIndex;
         }
-
-
+        #endregion
         #region cBxChange
         private void cBxTurista_CheckedChanged(object sender, EventArgs e)
         {
@@ -62,7 +64,7 @@ namespace FinalLaboratorio2_JoséBocci
         }
         #endregion
         #region btnClicks
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
@@ -96,6 +98,7 @@ namespace FinalLaboratorio2_JoséBocci
 
         private void btnCerrarSesión_Click(object sender, EventArgs e)
         {
+            Limpiar();
             Ocultar();
             btnIngresar.Visible = true;
             Sesiones();
@@ -106,30 +109,10 @@ namespace FinalLaboratorio2_JoséBocci
             switch (personal) 
             {
                 case 1:
-                    if (registrados1 > 0)
+                    if (ClientesEmpleado1.Count > 0)
                     {
                         try {
-                            int indice = -1;
-                            bool bandera = false;
-                            string nombrecliente, nombrelista;
-                            if (n != -1)
-                            {
-                                    dgvClientes1.Rows.RemoveAt(n);
-                             
-                            }
-                            registrados1--;
-                            ClientesEmpleado1.RemoveAt(n);
-                            while (bandera == false)
-                            {
-                                indice++;
-                                nombrecliente = Convert.ToString(dgvClientes1.Rows[n].Cells[0]);
-                                nombrelista = Convert.ToString(dgvClientesGerente.Rows[indice].Cells[0]);
-                                if (nombrecliente == nombrelista)
-                                {
-                                    bandera = true;
-                                }
-                            }
-                            dgvClientesGerente.Rows.RemoveAt(indice);
+                            BorradoDeRegistro(personal);
                         }
                         catch (Exception)
                         {
@@ -142,30 +125,10 @@ namespace FinalLaboratorio2_JoséBocci
                     }
                     break;
                 case 2:
-                    if (registrados2 > 0)
+                    if (ClientesEmpleado2.Count > 0)
                     {
                         try {
-                            int indice = -1;
-                            bool bandera = false;
-                            string nombrecliente, nombrelista;
-                            if (n != -1)
-                            {
-                         
-                                    dgvClientes2.Rows.RemoveAt(n);
-                            }
-                            registrados2--;
-                            ClientesEmpleado2.RemoveAt(n);
-                            while (bandera == false)
-                            {
-                                indice++;
-                                nombrecliente = Convert.ToString(dgvClientes1.Rows[n].Cells[0]);
-                                nombrelista = Convert.ToString(dgvClientesGerente.Rows[indice].Cells[0]);
-                                if (nombrecliente == nombrelista)
-                                {
-                                    bandera = true;
-                                }
-                            }
-                            dgvClientesGerente.Rows.RemoveAt(indice);
+                            BorradoDeRegistro(personal);
                         }
                         catch (Exception)
                         {
@@ -193,14 +156,25 @@ namespace FinalLaboratorio2_JoséBocci
             {
                 MessageBox.Show("Error al ingresar los datos de Registro. Hay campos vacíos y/o formato de datos erróneo. Corrija", "Error", MessageBoxButtons.OK);
             }
-            else
+            else if (ComprobarDNI(Convert.ToInt32(txtDNI.Text)) == 1)
+            {
+                MessageBox.Show("DNI de Cliente ya se encuentra registrado.", "Error");
+            }
+            else if (ComprobarHabitacion(txtHabitacion.Text) == 1)
+            {
+
+                MessageBox.Show("La Habitación ya se encuentra asignada.", "Error");
+
+            }else
             {
                 nombre = txtNombre.Text;
                 apellido = txtApellido.Text;
                 direccion = txtLugarDeResidencia.Text;
                 dni = Convert.ToInt32(txtDNI.Text);
+                DNIREGISTRO.Add(dni);
                 numero = Convert.ToInt64(txtTelefono.Text);
                 codigoHabitacion = txtHabitacion.Text;
+                HABITACIONREGISTRO.Add(codigoHabitacion);
 
                 verificarNochesyHabitacion();
 
@@ -222,16 +196,18 @@ namespace FinalLaboratorio2_JoséBocci
                     switch (personal)
                     {
                         case 1:
-                            registrados1++;
                             H1 = new Habitacion(codigoHabitacion);
                             C1 = new Cliente(nombre, apellido, direccion, numero, dni,H1);
                             ClientesEmpleado1.Add(C1);
+                            ClientesGerente.Add(C1);
                             n = dgvClientes1.Rows.Add();
                             dgvClientes1.Rows[n].Cells[0].Value = nombre;
                             dgvClientes1.Rows[n].Cells[1].Value = apellido;
-                            dgvClientes1.Rows[n].Cells[2].Value = noches;
-                            dgvClientes1.Rows[n].Cells[3].Value = precioFinal;
-                            dgvClientes1.Rows[n].Cells[4].Value = preferencia;
+                            dgvClientes1.Rows[n].Cells[2].Value = dni;
+                            dgvClientes1.Rows[n].Cells[3].Value = noches;
+                            dgvClientes1.Rows[n].Cells[4].Value = precioFinal;
+                            dgvClientes1.Rows[n].Cells[5].Value = preferencia;
+                            dgvClientes1.Rows[n].Cells[6].Value = codigoHabitacion;
                             n = dgvClientesGerente.Rows.Add();
                             dgvClientesGerente.Rows[n].Cells[0].Value = nombre;
                             dgvClientesGerente.Rows[n].Cells[1].Value = apellido;
@@ -244,16 +220,18 @@ namespace FinalLaboratorio2_JoséBocci
                             dgvClientesGerente.Rows[n].Cells[8].Value = codigoHabitacion;
                             break;
                         case 2:
-                            registrados2++;
                             H1 = new Habitacion(codigoHabitacion);
                             C1 = new Cliente(nombre, apellido, direccion, numero, dni, H1);
                             ClientesEmpleado2.Add(C1);
+                            ClientesGerente.Add(C1);
                             n = dgvClientes2.Rows.Add();
                             dgvClientes2.Rows[n].Cells[0].Value = nombre;
                             dgvClientes2.Rows[n].Cells[1].Value = apellido;
-                            dgvClientes2.Rows[n].Cells[2].Value = noches;
-                            dgvClientes2.Rows[n].Cells[3].Value = precioFinal;
-                            dgvClientes2.Rows[n].Cells[4].Value = preferencia;
+                            dgvClientes2.Rows[n].Cells[2].Value = dni;
+                            dgvClientes2.Rows[n].Cells[3].Value = noches;
+                            dgvClientes2.Rows[n].Cells[4].Value = precioFinal;
+                            dgvClientes2.Rows[n].Cells[5].Value = preferencia;
+                            dgvClientes2.Rows[n].Cells[6].Value = codigoHabitacion;
                             n = dgvClientesGerente.Rows.Add();
                             dgvClientesGerente.Rows[n].Cells[0].Value = nombre;
                             dgvClientesGerente.Rows[n].Cells[1].Value = apellido;
@@ -271,7 +249,115 @@ namespace FinalLaboratorio2_JoséBocci
             }
         }
         #endregion
-        #region metodos
+        #region Métodos
+        //Buscar y borrar
+        private void BorradoDeRegistro(int personal)
+        {
+            int dnicliente, dnilista, dniborrar, indice;
+            string habitacion;
+            if (personal == 1)
+            {
+                for (int i = 0; i < ClientesEmpleado1.Count; i++)
+                {
+                    for (int j = 0; j < ClientesGerente.Count; j++)
+                    {
+                        dnicliente = Convert.ToInt32(dgvClientes1.Rows[i].Cells[2].Value.ToString());
+                        dnilista = Convert.ToInt32(dgvClientesGerente.Rows[j].Cells[2].Value.ToString());
+                        if (dnicliente == dnilista)
+                        {
+                            habitacion = dgvClientesGerente.Rows[j].Cells[8].Value.ToString();
+                            dniborrar = Convert.ToInt32(dgvClientesGerente.Rows[j].Cells[2].Value.ToString());
+                            dgvClientesGerente.Rows.RemoveAt(j);
+                            j = ClientesGerente.Count;
+                            i = ClientesEmpleado1.Count;
+                            if (DNIREGISTRO.Contains(dniborrar))
+                            {
+                                indice = DNIREGISTRO.IndexOf(dniborrar);
+                                DNIREGISTRO.RemoveAt(indice);
+                            }
+                            if (HABITACIONREGISTRO.Contains(habitacion))
+                            {
+                                indice = HABITACIONREGISTRO.IndexOf(habitacion);
+                                HABITACIONREGISTRO.RemoveAt(indice);
+                            }
+                        }
+                    }
+                }
+                if (n != -1)
+                {
+                    dgvClientes1.Rows.RemoveAt(n);
+                }
+                ClientesEmpleado1.RemoveAt(n);
+            }
+            else
+            {
+                for (int i = 0; i < ClientesEmpleado2.Count; i++)
+                {
+                    for (int j = 0; j < ClientesGerente.Count; j++)
+                    {
+                        dnicliente = Convert.ToInt32(dgvClientes2.Rows[i].Cells[2].Value.ToString());
+                        dnilista = Convert.ToInt32(dgvClientesGerente.Rows[j].Cells[2].Value.ToString());
+                        if (dnicliente == dnilista)
+                        {
+                            habitacion = dgvClientesGerente.Rows[j].Cells[8].Value.ToString();
+                            dniborrar = Convert.ToInt32(dgvClientesGerente.Rows[j].Cells[2].Value.ToString());
+                            dgvClientesGerente.Rows.RemoveAt(j);
+                            j = ClientesGerente.Count;
+                            i = ClientesEmpleado2.Count;
+                            if (DNIREGISTRO.Contains(dniborrar))
+                            {
+                                indice = DNIREGISTRO.IndexOf(dniborrar);
+                                DNIREGISTRO.RemoveAt(indice);
+                            }
+                            if (HABITACIONREGISTRO.Contains(habitacion))
+                            {
+                                indice = HABITACIONREGISTRO.IndexOf(habitacion);
+                                HABITACIONREGISTRO.RemoveAt(indice);
+                            }
+                        }
+                    }
+                }
+                if (n != -1)
+                {
+                    dgvClientes2.Rows.RemoveAt(n);
+                }
+                ClientesEmpleado2.RemoveAt(n);
+            }
+        }
+        //verifica que los DNI no se repitan
+        private int ComprobarDNI(int dni)
+        {
+            int i, verificacion = 0;
+            for (i = 0;i < DNIREGISTRO.Count; i++)
+            {
+                if (dni == (int) DNIREGISTRO[i])
+                {
+                    verificacion = 1;
+                }
+                else
+                {
+                    verificacion = 0;
+                }
+            }
+            return verificacion;
+        }
+        //Verifica que el código de habitación no se repita
+        private int ComprobarHabitacion(string codigo)
+        {
+            int i, verificacion = 0;
+            for (i = 0; i < HABITACIONREGISTRO.Count; i++)
+            {
+                if (codigo == (string) HABITACIONREGISTRO[i])
+                {
+                    verificacion = 1;
+                }
+                else
+                {
+                    verificacion = 0;
+                }
+            }
+            return verificacion;
+        }
         //Limpia los campos de entrada
         private void Limpiar()
         {
@@ -354,7 +440,7 @@ namespace FinalLaboratorio2_JoséBocci
             txtHabitacion.Visible = false;
             btnBorrar.Visible = false;
             btnCalcular.Visible = false;
-            btnCancelar.Visible = false;
+            btnLimpiar.Visible = false;
             btnRegistrar.Visible = false;
             btnCerrarSesión.Visible = false;
             rBtn10.Visible = false;
@@ -398,7 +484,7 @@ namespace FinalLaboratorio2_JoséBocci
             txtHabitacion.Visible = true;
             btnBorrar.Visible = true;
             btnCalcular.Visible = true;
-            btnCancelar.Visible = true;
+            btnLimpiar.Visible = true;
             btnRegistrar.Visible = true;
             rBtn10.Visible = true;
             rBtn5.Visible = true;
